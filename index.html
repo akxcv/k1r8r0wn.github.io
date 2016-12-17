@@ -1,73 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <!-- Meta staff -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <meta name="description" content="Hi, I'm Web developer &amp; Freelancer. Welcome to my personal blog.">
-    <meta name="keywords" content="internet web website page design development freelancer developer front-end back-end ruby ruby-on-rails sql sqlite mysql postgresql html5 mailchimp css3 bootstrap sass compass javascript jquery coffeescript git russia siberia omsk">
+---
+layout: default
+---
 
-    <!-- Title -->
-    <title>Web developer, Freelancer | Kirill Bobrov</title>
-
-    <!-- Icons -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
-    <link rel="apple-touch-icon" type="image/png" href="images/favicon.png" sizes="144x144">
-    <link rel="mask-icon" type="image/svg" href="images/favicon.svg" color="#424652">
-
-    <!-- Google Fonts -->
-    <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Inconsolata:600|Fira+Mono">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- JS -->
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/main.js"></script>
-  </head>
-  <body>
-    <section class="centered">
-      <div class="logo_wrapper">
-        <a id="logo" href="/">
-          <img src="images/logo.svg" alt="Logo">
-        </a>
-      </div>
-      <div class="message-wrapper">
-        <div class="message">
-          <h4>Please stand by...</h4>
-          <p>This blog is currently under construction.</p>
-        </div>
-        <div class="message">
-          <h4>Пожалуйста, подождите...</h4>
-          <p>Этот блог временно находится на этапе разработки.</p>
-        </div>
-      </div>
-    </section>
-
-    <footer class='footer'>
-      <div class="social_me">
-        <a href="https://github.com/k1r8r0wn">
-          <i class="icon-github"></i>
-        </a>
-        <a href="http://stackoverflow.com/story/k1r8r0wn">
-          <i class="icon-stackoverflow"></i>
-        </a>
-        <a href="https://twitter.com/k1r8r0wn">
-          <i class="icon-twitter"></i>
-        </a>
-        <a href="https://www.instagram.com/k1r8r0wn">
-          <i class="icon-instagram"></i>
-        </a>
-        <a href="https://linkedin.com/in/k1r8r0wn">
-          <i class="icon-linkedin"></i>
-        </a>
-      </div>
-      <p class="copyright">
-        &copy;
-        2016
-        k1r8r0wn
-      </p>
-    </footer>
-  </body>
-</html>
+<section class="centered">
+  <div class="logo_wrapper">
+    <a id="logo" href="/">
+      <img src="{{ "/assets/img/logo.svg" | prepend: site.baseurl }}" alt="Logo">
+    </a>
+  </div>
+  <div class="message-wrapper">
+    <div class="message">
+      <h4>Please stand by...</h4>
+      <p>This blog is currently under construction.</p>
+    </div>
+    <div class="message">
+      <h4>Пожалуйста, подождите...</h4>
+      <p>Этот блог временно находится на этапе разработки.</p>
+    </div>
+  </div>
+</section>

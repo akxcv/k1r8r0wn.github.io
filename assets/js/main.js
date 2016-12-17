@@ -1,3 +1,5 @@
+// Animate messages
+
 $(document).ready(function() {
     setInterval('Animate();', 4000);
 });
