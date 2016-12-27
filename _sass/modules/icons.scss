@@ -1,0 +1,17 @@
+/* ==================================
+  Icons
+================================== */
+
+@include font-face("icons", "../fonts/icons");
+
+[class^="icon-"], 
+[class*=" icon-"] {
+  font-family: 'icons' !important; // Use !important to prevent issues with browser extensions that change fonts
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-transform: none;
+  speak: none;
+}
