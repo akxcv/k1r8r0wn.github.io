@@ -1,0 +1,37 @@
+/* =================================
+  Global components
+==================================== */
+
+body {
+  background: $background;
+  color: $main;
+  font-family: $monospace;
+  min-width: 300px;
+    // for better font rendering
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ----- Typography ----- */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $sans-serif;
+  font-weight: 800;
+}
+
+a {
+  color: $main;
+  text-decoration: none;
+    -smoothing-webkit-tap-highlight-color: rgba(0, 0, 0, 0); // prevent tap highlight color
+
+  &:hover {
+    color: $brown;
+  }
+}
+
+li {
+  list-style: none;
+}

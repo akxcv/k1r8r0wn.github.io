@@ -1,9 +1,15 @@
 // Import vendor styles
 
 @import '../vendor/css/normalize';
-@import '../vendor/css/bourbon/bourbon'; // bourbon mixins (bourbon.io)
-@import '../vendor/css/neat/neat'; // Bourbon Neat grid mixins (neat.bourbon.io)
+@import '../vendor/css/bourbon/bourbon';
+@import '../vendor/css/neat/neat';
 
 // Import modules
 
+@import 'modules/variables';
 @import 'modules/icons';
+
+// Import partials
+
+@import 'partials/global';
+@import 'partials/header';
