@@ -1,14 +1,15 @@
 # Site settings
 title: Web developer, Freelancer | Kirill Bobrov
 author: k1r8r0wn
-description: > # this means to ignore newlines until "baseurl:"
+description:
   Hi, I'm Web developer &amp; Freelancer. Welcome to my personal blog.
-keywords: >
+keywords:
   internet web website page design development freelancer developer front-end back-end ruby ruby-on-rails 
   sql sqlite mysql postgresql html5 mailchimp css3 bootstrap sass compass javascript jquery 
   coffeescript git russia siberia omsk
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://k1r8r0wn.github" # the base hostname & protocol for your site, e.g. http://example.com
+
+baseurl: '' # the subpath of your site, e.g. /blog
+url: 'https://k1r8r0wn.github' # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
@@ -17,4 +18,4 @@ exclude:
   - Gemfile.lock
 
 # GitHub's repository
-repository: k1r8r0wn/k1r8r0wn.github.io
+# repository: k1r8r0wn/k1r8r0wn.github.io
