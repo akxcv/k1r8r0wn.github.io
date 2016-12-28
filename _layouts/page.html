@@ -4,7 +4,8 @@ layout: default
 
 <!-- Heading -->
 <section class="heading-wrapper">
-  <div class="background-image" style="background-image: url('{{ site.baseurl }}/{% if page.heading-img %}{{ page.heading-img }}{% else %}{{ site.heading-img }}{% endif %}')"></div>
+  
+  <img class="background-image" src="{{ site.baseurl }}/{% if page.heading-img %}{{ page.heading-img }}{% else %}{{ site.heading-img }}{% endif %}" alt="Background image">
 
   <div class="container">
     <div class="site-heading">

@@ -3,12 +3,9 @@
 ==================================== */
 
 .heading-wrapper {
-  background-size: cover;
-  display: inline-block;
   height: 400px;
   overflow: hidden;
   position: relative;
-  width: 100%;
 
   .container {
     bottom: 0;
@@ -24,10 +21,6 @@
 /* Background image */
 
 .background-image {
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
   @include transition(transform .5s);
 
   &:before {
