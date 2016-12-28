@@ -5,7 +5,7 @@
 body {
   background: $background;
   color: $main;
-  font-family: $monospace;
+  font-family: $sans-serif;
   min-width: 300px;
     // for better font rendering
     -webkit-font-smoothing: antialiased;
@@ -18,7 +18,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: $sans-serif;
+  font-family: $serif;
   font-weight: 800;
 }
 
@@ -34,4 +34,10 @@ a {
 
 li {
   list-style: none;
+}
+
+hr.small {
+  border: 1px solid $brown;
+  max-width: 100px;
+  margin: 15px auto;
 }

@@ -4,8 +4,9 @@
 
 // Font variables
 
-$monospace: 'Roboto Mono', monospace;
-$sans-serif: 'Roboto', Helvetica, Arial, sans-serif;
+$serif: 'PT Serif', Cambria, Georgia, serif;
+$sans-serif: 'PT Sans', Helvetica, Arial, sans-serif;
+$monospace: 'Fira Mono', 'Times New Roman', monospace;
 
 // Color variables
 
@@ -14,3 +15,7 @@ $background: #fdf6e3;
 
 $brown: #795548;
 $white: #fff;
+
+// Breakpoints
+
+$large-screen: 53.75em !default;

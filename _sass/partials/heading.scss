@@ -1,0 +1,79 @@
+/* =================================
+  Heading
+==================================== */
+
+.heading-wrapper {
+  background-size: cover;
+  display: inline-block;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  .container {
+    bottom: 0;
+    height: 160px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+/* Background image */
+
+.background-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  @include transition(transform .5s);
+
+  &:before {
+    content: '';
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.heading-wrapper:hover .background-image,
+.heading-wrapper:focus .background-image {
+  @include transform(scale(1.1));
+}
+
+.heading-wrapper:hover .background-image:before,
+.heading-wrapper:focus .background-image:before {
+  display: block;
+}
+
+/* Site heading */
+
+.site-heading {
+  color: $brown;
+  text-align: center;
+  @include span-columns(6);
+  @include shift(3);
+
+  h1 {
+    font-size: 50px;
+    margin-top: 0;
+
+    @include media($large-screen) {
+      font-size: 80px;
+    }
+  }
+
+  .subheading {
+    display: block;
+    font-size: 24px;
+    font-family: $sans-serif;
+    font-weight: 300;
+    line-height: 1.1;
+    margin: 10px 0 0;
+  }
+}
