@@ -4,9 +4,9 @@
 
 // Font variables
 
-$serif: 'PT Serif', Cambria, Georgia, serif;
-$sans-serif: 'PT Sans', Helvetica, Arial, sans-serif;
-$monospace: 'Fira Mono', 'Times New Roman', monospace;
+$serif:                         'PT Serif', Cambria, Georgia, serif;
+$sans-serif:                    'PT Sans', Helvetica, Arial, sans-serif;
+$monospace:                     'Fira Mono', 'Times New Roman', monospace;
 
 // Color variables
 
@@ -20,6 +20,12 @@ $white:                          #fff;
 
 $large-screen:                   1300px;
 $medium-screen:                  860px;
+
+// Background image
+
+$bg-image-background:            #232f2f;
+$heading-wrapper-height:         400px;
+$background-image-height:        $heading-wrapper-height * 2;
 
 // Breakpoints for pagination
 

@@ -2,50 +2,34 @@
   Heading
 ==================================== */
 
-.heading-wrapper {
-  height: 400px;
-  overflow: hidden;
-  position: relative;
-}
-
 /* Background image */
 
+.heading-wrapper {
+  height: $heading-wrapper-height;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
 .background-image {
-  @include transition(transform .5s);
-
-  &::before {
-    content: '';
-    display: none;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-}
-
-.heading-wrapper:hover .background-image,
-.heading-wrapper:focus .background-image {
-  @include transform(scale(1.1));
-}
-
-.heading-wrapper:hover .background-image::before,
-.heading-wrapper:focus .background-image::before {
-  display: block;
+  background-position: top;
+  background-size: cover;
+  background-color: $bg-image-background;
+  height: $background-image-height;
+  left: 0;
+  position: absolute;
+  top: - $heading-wrapper-height / 3;
+  width: 100%;
 }
 
 /* Page heading */
 
 .page-heading {
-  bottom: 0;
-  color: $brown;
-  height: 160px;
-  left: 0;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  text-align: center;
-  right: 0;
+  color: $white;
+  position: relative;
+  padding: 7.5em 0;
+  z-index: 1;
 
   h1 {
     font-size: 50px;
@@ -54,6 +38,10 @@
     @include media($medium-screen) {
       font-size: 80px;
     }
+  }
+
+  hr {
+    border-color: $white;
   }
 
   .subheading {
