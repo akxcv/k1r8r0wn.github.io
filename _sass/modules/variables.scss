@@ -10,13 +10,35 @@ $monospace: 'Fira Mono', 'Times New Roman', monospace;
 
 // Color variables
 
-$main: #657b83;
-$background: #fdf6e3;
+$main:                           #657b83;
+$background:                     #fdf6e3;
 
-$brown: #795548;
-$white: #fff;
+$brown:                          #795548;
+$white:                          #fff;
 
 // Breakpoints
 
-$large-screen: 1300px;
-$medium-screen: 860px;
+$large-screen:                   1300px;
+$medium-screen:                  860px;
+
+// Breakpoints for pagination
+
+$pagination-breakpoint1:         320px;
+$pagination-breakpoint2:         500px;
+$pagination-breakpoint3:         600px;
+$pagination-breakpoint4:         860px;
+$pagination-breakpoint5:         860px;
+$pagination-breakpoint6:         860px;
+$pagination-breakpoint7:         860px;
+$pagination-breakpoint8:         860px;
+$pagination-breakpoint9:         860px;
+
+// Styling for pagination
+
+$pagination-margin:              4em 0;
+$pagination-item-margin:         0 .2em;
+$pagination-item-size:           32px;
+$pagination-item-color:          #657b83;
+$pagination-item-hover:          #795548;
+$pagination-item-active:         #795548;
+$pagination-item-active-color:   #fdf6e3;
