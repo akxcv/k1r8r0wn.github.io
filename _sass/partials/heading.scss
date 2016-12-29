@@ -13,7 +13,7 @@
 .background-image {
   @include transition(transform .5s);
 
-  &:before {
+  &::before {
     content: '';
     display: none;
     height: 100%;
@@ -29,8 +29,8 @@
   @include transform(scale(1.1));
 }
 
-.heading-wrapper:hover .background-image:before,
-.heading-wrapper:focus .background-image:before {
+.heading-wrapper:hover .background-image::before,
+.heading-wrapper:focus .background-image::before {
   display: block;
 }
 

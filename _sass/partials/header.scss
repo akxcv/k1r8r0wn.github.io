@@ -5,7 +5,7 @@
 /* ----- Navigation ----- */
 
 .navigation {
-  $navigation-logo-height: 2em;
+  $navigation-logo-height: 40px;
   $navigation-height: 60px;
   $navigation-item-nudge: 2.2em;
   $horizontal-bar-mode: $medium-screen;
@@ -18,7 +18,7 @@
     padding: .5em 1em;
 
     img {
-      height: 40px;
+      height: $navigation-logo-height;
     }
 
     @include media($horizontal-bar-mode) {
@@ -115,13 +115,6 @@
     padding: .5em 0;
     text-align: center;
 
-    @include media(max-width $horizontal-bar-mode) {
-      a {
-        display: block;
-        width: 100%;
-      }
-    }
-
     @include media($horizontal-bar-mode) {
       display: inline;
       float: right;
@@ -192,8 +185,7 @@
   }
 
   .logo img {
-    height: 40px;
+    height: $navigation-logo-height;
     margin-bottom: -$navigation-logo-height / 3;
-    max-height: $navigation-logo-height;
   }
 }
