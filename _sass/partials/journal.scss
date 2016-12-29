@@ -1,0 +1,28 @@
+/* =================================
+  Journal
+==================================== */
+
+/* Posts preview */
+
+.post-preview {
+  padding: 1em 0;
+
+  .post-title {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .post-subtitle {
+    margin: 0;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+
+  .post-meta {
+    color: $brown;
+    font-size: 18px;
+    font-style: italic;
+    margin: 1em 0;
+  }
+}

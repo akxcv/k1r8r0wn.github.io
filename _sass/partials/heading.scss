@@ -6,16 +6,6 @@
   height: 400px;
   overflow: hidden;
   position: relative;
-
-  .container {
-    bottom: 0;
-    height: 160px;
-    left: 0;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
 }
 
 /* Background image */
@@ -44,29 +34,30 @@
   display: block;
 }
 
-/* Site heading */
+/* Page heading */
 
-.site-heading {
+.page-heading {
+  bottom: 0;
   color: $brown;
+  height: 160px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
   text-align: center;
-  @include span-columns(6);
-  @include shift(3);
+  right: 0;
 
   h1 {
     font-size: 50px;
     margin-top: 0;
 
-    @include media($large-screen) {
+    @include media($medium-screen) {
       font-size: 80px;
     }
   }
 
   .subheading {
-    display: block;
-    font-size: 24px;
-    font-family: $sans-serif;
-    font-weight: 300;
-    line-height: 1.1;
+    font-size: 24px;    
     margin: 10px 0 0;
   }
 }
