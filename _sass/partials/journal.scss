@@ -4,24 +4,6 @@
 
 .journal-wrapper {
   @include animation-name(fadeInUp);
-  @include animation-duration(2s);
-  @include animation-fill-mode(both);
-}
-
-@include keyframes(fadeInUp) {
-  0% {
-    opacity: 0;
-    @include transform(translate3d(0, 100%, 0));
-  }
-
-  60% {
-    opacity: .4;
-    @include transform(none);
-  }
-
-  100% {
-    opacity: 1;
-  }
 }
 
 /* Posts preview */

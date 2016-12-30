@@ -31,7 +31,7 @@ $footer-link-color: #fdf6e3;
     margin: 0 0 1em 0;
     padding: 0;
 
-    @include media($large-screen) {
+    @include media($medium-screen) {
       float: left;
       margin-bottom: 0;
       margin-left: 1em;
@@ -44,7 +44,7 @@ $footer-link-color: #fdf6e3;
   }
 
   .copyright {
-    @include media($large-screen) {
+    @include media($medium-screen) {
       float: left;
     }
   }
@@ -60,7 +60,7 @@ $footer-link-color: #fdf6e3;
   }
 
   .made-with {
-    @include media($large-screen) {
+    @include media($medium-screen) {
       margin-right: 1em;
       float: right;
     }
@@ -73,7 +73,7 @@ $footer-link-color: #fdf6e3;
   .social-links {
     margin-top: 1em;
 
-    @include media($large-screen) {
+    @include media($medium-screen) {
       float: right;
     }
 

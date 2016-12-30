@@ -43,7 +43,7 @@ $horizontal-bar-mode: $medium-screen;
     }
 
     span {
-      background: $main;  
+      background: $brown;  
       height: 2px;
       left: 0;
       position: absolute;
@@ -93,7 +93,7 @@ $horizontal-bar-mode: $medium-screen;
   }
 
   .navigation-menu {
-    border-top: 1px solid $main;
+    border-top: 1px solid $brown;
     clear: both;
     display: none;
     margin: 0 auto;
@@ -107,6 +107,7 @@ $horizontal-bar-mode: $medium-screen;
       display: block;
       height: $navigation-height;
       text-align: center;
+      padding: 0 1em;
     }
   }
 
@@ -126,6 +127,10 @@ $horizontal-bar-mode: $medium-screen;
         line-height: 40px;
         margin: 0 1rem;
         position: relative;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
 
         &::before,
         &::after {
