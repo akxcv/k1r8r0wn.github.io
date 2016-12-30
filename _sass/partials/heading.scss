@@ -4,6 +4,12 @@
 
 /* Background image */
 
+// Variables
+
+$bg-image-background:            #232f2f;
+$heading-wrapper-height:         400px;
+$background-image-height:        $heading-wrapper-height * 2;
+
 .heading-wrapper {
   height: $heading-wrapper-height;
   overflow: hidden;

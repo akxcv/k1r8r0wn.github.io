@@ -2,6 +2,28 @@
   Pagination
 ==================================== */
 
+// Breakpoint variables
+
+$pagination-breakpoint1:         320px;
+$pagination-breakpoint2:         500px;
+$pagination-breakpoint3:         600px;
+$pagination-breakpoint4:         860px;
+$pagination-breakpoint5:         860px;
+$pagination-breakpoint6:         860px;
+$pagination-breakpoint7:         860px;
+$pagination-breakpoint8:         860px;
+$pagination-breakpoint9:         860px;
+
+// Styling variables
+
+$pagination-margin:              4em 0;
+$pagination-item-margin:         0 .2em;
+$pagination-item-size:           32px;
+$pagination-item-color:          #657b83;
+$pagination-item-hover:          #795548;
+$pagination-item-active:         #795548;
+$pagination-item-active-color:   #fdf6e3;
+
 .pagination {
   margin: $pagination-margin;
   padding: 0;
