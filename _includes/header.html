@@ -17,18 +17,7 @@
             <img src="{{ "/assets/img/logo.svg" | prepend: site.baseurl }}" alt="Logo">
           </a>
         </li>
-        {% for page in site.pages %}
-          {% if page.title && page.url != '/404' %}
-            {% if page.url != '/404' %}
-              <li class="nav-link">
-                <a class='page' href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-              </li>
-            {% endif %}
-          {% endif %}
-        {% endfor %}
-        <li class="nav-link">
-           <a class='page' href="{{ site.baseurl }}/">Journal</a>      
-        </li>
+        {% include navigation_pages.html %}
       </ul>
     </nav>
   </div>

@@ -90,9 +90,9 @@ layout: page
   {% if paginator.previous_page %}
     <li class="previous">
       {% if paginator.previous_page == 1 %}
-        <a class="pagination-item" href="{{ "/" | prepend: site.baseurl }}">previous</a>
+        <a class="pagination-item" href="{{ "/" | prepend: site.baseurl }}">&#8592;</a>
       {% else %}
-        <a class="pagination-item" href="{{ paginator.previous_page_path }}">previous</a>
+        <a class="pagination-item" href="{{ paginator.previous_page_path }}">&#8592;</a>
       {% endif %}
     </li>
   {% endif %}
@@ -136,7 +136,7 @@ layout: page
 
   {% if paginator.next_page %}
     <li class="next">
-      <a class="pagination-item" href="{{ paginator.next_page_path }}">next</a>
+      <a class="pagination-item" href="{{ paginator.next_page_path }}">&#8594;</a>
     </li>
   {% endif %}
 </ul>

@@ -26,9 +26,10 @@ a {
   text-decoration: none;
     -smoothing-webkit-tap-highlight-color: rgba(0, 0, 0, 0); // prevent tap highlight color
 
+  &:focus,
   &:hover {
     color: $brown;
-    @include transition(.5s ease-in-out);
+    @include transition(all .5s ease-in);
   }
 }
 

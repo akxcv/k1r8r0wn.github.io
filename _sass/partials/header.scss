@@ -4,12 +4,14 @@
 
 /* ----- Navigation ----- */
 
-.navigation {
-  $navigation-logo-height: 40px;
-  $navigation-height: 60px;
-  $navigation-item-nudge: 2.2em;
-  $horizontal-bar-mode: $medium-screen;
+// Variables
 
+$navigation-logo-height: 40px;
+$navigation-height: 60px;
+$navigation-item-nudge: 2.2em;
+$horizontal-bar-mode: $medium-screen;
+
+.navigation {
   /* Mobile view */
 
   .mobile-logo {
@@ -41,11 +43,11 @@
     }
 
     span {
-      position: absolute;
+      background: $main;  
       height: 2px;
-      width: 100%;
-      background: $main;
       left: 0;
+      position: absolute;
+      width: 100%;
       @include transform(rotate(0deg));
       @include transition(.5s ease-in-out);
 
@@ -119,46 +121,44 @@
       display: inline;
       float: right;
 
-      a {
+      a.page {
         display: inline-block;
         line-height: 40px;
         margin: 0 1rem;
         position: relative;
 
-        &.page {
-          &::before,
-          &::after {
-            position: absolute;
-            pointer-events: none;
-            @include transition(transform .5s, opacity .5s);
-          }
+        &::before,
+        &::after {
+          position: absolute;
+          pointer-events: none;
+          @include transition(transform .5s, opacity .5s);
+        }
 
-          &::before {
-            content: attr(data-hover);
-          }
+        &::before {
+          content: attr(data-hover);
+        }
 
-          &::after {
-            background: $brown;
-            bottom: 0;
-            content: '';
-            height: 2px;
-            left: 0;
-            opacity: 0;
-            width: 100%;
-            @include transform(translateY(5px));
-          }
+        &::after {
+          background: $brown;
+          bottom: 0;
+          content: '';
+          height: 2px;
+          left: 0;
+          opacity: 0;
+          width: 100%;
+          @include transform(translateY(5px));
+        }
 
-          &:hover::before,
-          &:focus::before {
-            opacity: 0;
-            @include transform(translateY(-2px));
-          }
+        &:hover::before,
+        &:focus::before {
+          opacity: 0;
+          @include transform(translateY(-2px));
+        }
 
-          &:hover::after,
-          &:focus::after {
-            opacity: 1;
-            @include transform(translateY(0));
-          }
+        &:hover::after,
+        &:focus::after {
+          opacity: 1;
+          @include transform(translateY(0));
         }
       }
     }
