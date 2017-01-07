@@ -1,0 +1,193 @@
+/* =================================
+  Pagination
+==================================== */
+
+// Breakpoint variables
+
+$pagination-breakpoint1:         320px;
+$pagination-breakpoint2:         500px;
+$pagination-breakpoint3:         600px;
+$pagination-breakpoint4:         860px;
+$pagination-breakpoint5:         860px;
+$pagination-breakpoint6:         860px;
+$pagination-breakpoint7:         860px;
+$pagination-breakpoint8:         860px;
+$pagination-breakpoint9:         860px;
+
+// Styling variables
+
+$pagination-margin:              4em 0;
+$pagination-item-margin:         0 .2em;
+$pagination-item-size:           32px;
+$pagination-item-color:          #657b83;
+$pagination-item-hover:          #795548;
+$pagination-item-active:         #795548;
+$pagination-item-active-color:   #fdf6e3;
+
+.pagination {
+  margin: $pagination-margin;
+  padding: 0;
+  text-align: center;
+
+  li {
+    display: none;
+    margin: $pagination-item-margin;
+
+    .pagination-item {
+      display: block;
+    }
+
+    &.page {
+      .pagination-item {
+        color: $pagination-item-color;
+        height: $pagination-item-size;
+        line-height: $pagination-item-size;
+        width: $pagination-item-size;
+      }
+    
+      a:hover {
+        color: $pagination-item-active-color;
+        background: $pagination-item-hover;
+      }
+
+      &.current-page {
+        .pagination-item {
+          background: $pagination-item-active;
+          color: $pagination-item-active-color;
+        }
+      }
+    }
+  }
+
+  // Always display the first, current and last page when
+  // They are available in the markup
+  .current-page,
+  .previous,
+  .next {
+    display: inline-block;
+  }
+
+  // First breakpoint
+  @include media($pagination-breakpoint1) {
+
+    // When there are active indicators show them
+    // Using a double class here to win over future breakpoints
+    .pagination-indicator.pagination-indicator--active {
+      display: inline-block;
+    }
+
+    // The first and last item in the paginator
+    .first,
+    .last {
+      display: inline-block;
+    }
+
+    // Show indicators on smaller screen when other pagination are hidden
+    // This way we'll never have "<previous 1 3 4 5 next>"
+    // But we'll have "<previous 1 ... 3 4 5 next>"
+    .pagination-indicator--offset-2,
+    .pagination-indicator--offset-3,
+    .pagination-indicator--offset-4,
+    .pagination-indicator--offset-5,
+    .pagination-indicator--offset-6,
+    .pagination-indicator--offset-7 {
+      display: inline-block;
+    }
+  }
+
+  @include media($pagination-breakpoint2) {
+    // Show items next to active item
+    .offset-1 {
+      display: inline-block;
+    }
+
+    // And hide indicator to make room
+    .pagination-indicator--offset-2 {
+      display: none;
+    }
+  }
+
+  @include media($pagination-breakpoint3) {
+    // Show items 2 spots next to active item
+    .offset-2 {
+      display: inline-block;
+    }
+
+    // And hide indicator to make room
+    .pagination-indicator--offset-3 {
+      display: none;
+    }
+  }
+
+  @include media($pagination-breakpoint4) {
+    // Show items 3 spots next to active item
+    .offset-3 {
+      display: inline-block;
+    }
+
+    // And hide indicator to make room
+    .pagination-indicator--offset-4 {
+      display: none;
+    }
+  }
+
+  @include media($pagination-breakpoint5) {
+    // Show items 3 spots next to active item
+    .offset-4 {
+      display: inline-block;
+    }
+
+    // And hide indicator to make room
+    .pagination-indicator--offset-5 {
+      display: none;
+    }
+  }
+
+  @include media($pagination-breakpoint6) {
+    // Show items 3 spots next to active item
+    .offset-5 {
+      display: inline-block;
+    }
+
+    // And hide indicator to make room
+    .pagination-indicator--offset-6 {
+      display: none;
+    }
+  }
+
+  @include media($pagination-breakpoint7) {
+    // Show items 3 spots next to active item
+    .offset-6 {
+      display: inline-block;
+    }
+
+    // And hide indicator to make room
+    .pagination-indicator--offset-7 {
+      display: none;
+    }
+  }
+
+  @include media($pagination-breakpoint8) {
+    // Show items 3 spots next to active item
+    .offset-7 {
+      display: inline-block;
+    }
+
+    // And hide indicator to make room
+    .pagination-indicator--offset-8 {
+      display: none;
+    }
+  }
+
+  @include media($pagination-breakpoint9) {
+    // Show items 3 spots next to active item
+    .offset-8 {
+      display: inline-block;
+    }
+
+    // And hide indicator to make room
+    .pagination-indicator--offset-9 {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+/* =================================
+  Heading
+==================================== */
+
+/* Background image */
+
+// Variables
+
+$bg-image-background:            #232f2f;
+$heading-wrapper-height:         400px;
+$background-image-height:        $heading-wrapper-height * 2;
+
+.heading-wrapper {
+  height: $heading-wrapper-height;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.background-image {
+  background-position: top;
+  background-size: cover;
+  background-color: $bg-image-background;
+  height: $background-image-height;
+  left: 0;
+  position: absolute;
+  top: - $heading-wrapper-height / 3;
+  width: 100%;
+}
+
+/* Page heading */
+
+.page-heading {
+  color: $white;
+  position: relative;
+  padding: 7.5em 0;
+  z-index: 1;
+
+  h1 {
+    font-size: 50px;
+    margin-top: 0;
+
+    @include media($medium-screen) {
+      font-size: 80px;
+    }
+  }
+
+  hr {
+    border-color: $white;
+  }
+
+  .subheading {
+    font-size: 24px;    
+    margin: 10px 0 0;
+  }
+}
