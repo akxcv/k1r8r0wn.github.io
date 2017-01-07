@@ -22,6 +22,11 @@
   display: table;
   height: 100%;
   width: 100%;
+
+  &.no-posts {
+    min-height: 50vh;
+    text-align: center;
+  }
 }
 
 .vertical-center {

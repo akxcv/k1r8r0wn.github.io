@@ -2,7 +2,7 @@
   Icons
 ================================== */
 
-@include font-face("icons", "../fonts/icons");
+@include font-face("icons", "../fonts/icons", $file-formats: ttf eot woff svg);
 
 [class^="icon-"], 
 [class*=" icon-"] {
@@ -14,4 +14,41 @@
   line-height: 1;
   text-transform: none;
   speak: none;
+}
+
+.icon-tag {
+  &::before {
+    content: "\e900";
+  }
+}
+
+.icon-heart {
+  font-size: .8em;
+  &::before{
+    content: "\e901";
+  }
+}
+
+.icon-feed {
+  &::before {
+    content: "\e907";
+  }
+}
+
+.icon-twitter {
+  &::before {
+    content: "\e908";
+  }
+}
+
+.icon-stack-overflow {
+  &::before {
+    content: "\e909";
+  }
+}
+
+.icon-github {
+  &::before {
+    content: "\e90b";
+  }
 }
