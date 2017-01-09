@@ -8,12 +8,15 @@ $serif:                         'PT Serif', Cambria, Georgia, serif;
 $sans-serif:                    'PT Sans', Helvetica, Arial, sans-serif;
 $monospace:                     'Fira Mono', 'Times New Roman', monospace;
 
+$font-size:                     calc(.9em + .4vw);
+
 // Color variables
 
 $main:                           #657b83;
 $background:                     #fdf6e3;
 
 $brown:                          #795548;
+$dark-brown:                     #232f2f;
 $white:                          #fff;
 $red:                            #b13f3f;
 

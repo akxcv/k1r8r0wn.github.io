@@ -11,6 +11,7 @@ body {
   background: $background;
   color: $main;
   font-family: $sans-serif;
+  font-size: $font-size;
   min-width: 300px;
     // for better font rendering
     -webkit-font-smoothing: antialiased;
@@ -36,6 +37,10 @@ a {
     color: $brown;
     @include transition(all .5s ease-in);
   }
+}
+
+p {
+  line-height: 1.5;
 }
 
 li {
