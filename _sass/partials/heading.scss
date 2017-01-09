@@ -6,12 +6,10 @@
 
 // Variables
 
-$bg-image-background:            #232f2f;
 $heading-wrapper-height:         400px;
 $background-image-height:        $heading-wrapper-height * 2;
 
 .heading-wrapper {
-  height: $heading-wrapper-height;
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -21,11 +19,11 @@ $background-image-height:        $heading-wrapper-height * 2;
 .background-image {
   background-position: top;
   background-size: cover;
-  background-color: $bg-image-background;
+  background-color: $dark-brown;
   height: $background-image-height;
   left: 0;
   position: absolute;
-  top: - $heading-wrapper-height / 3;
+  top: 0;
   width: 100%;
 }
 
@@ -34,16 +32,12 @@ $background-image-height:        $heading-wrapper-height * 2;
 .page-heading {
   color: $white;
   position: relative;
-  padding: 7.5em 0;
+  padding: 5em 2em;
   z-index: 1;
 
   h1 {
-    font-size: 50px;
     margin-top: 0;
-
-    @include media($medium-screen) {
-      font-size: 80px;
-    }
+    font-size: calc(2.5em + .4vw);
   }
 
   hr {
@@ -51,7 +45,10 @@ $background-image-height:        $heading-wrapper-height * 2;
   }
 
   .subheading {
-    font-size: 24px;    
     margin: 10px 0 0;
+  }
+
+  .meta {
+    margin-top: 1em;
   }
 }

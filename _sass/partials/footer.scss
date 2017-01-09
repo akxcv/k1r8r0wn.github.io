@@ -5,12 +5,10 @@
 // Variables
 
 $base-spacing: 1.5em;
-$footer-background: #232f2f;
 $footer-color: #fdf6e3;
-$footer-link-color: #fdf6e3;
 
 .footer {
-  background: $footer-background;
+  background: $dark-brown;
   color: $footer-color;
   display: inline-block;
   padding: $base-spacing;
@@ -46,16 +44,6 @@ $footer-link-color: #fdf6e3;
   .copyright {
     @include media($medium-screen) {
       float: left;
-    }
-  }
-
-  .navigation {
-    a.page {
-      color: $footer-link-color;
-
-      &::after {
-        background: $footer-link-color;
-      }
     }
   }
 

@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+<!-- Heading -->
+<div class="heading-wrapper">
+  <div class="page-heading container">
+    <h1>{{ page.title }}</h1>
+    <hr class="small">
+    {% if page.subtitle %}
+      <h2 class="subheading">{{ page.subtitle }}</h2>
+    {% endif %}
+    <div class="meta">
+      Posted on
+      {% assign d = page.date | date: "%-d" %} 
+      {% assign m = page.date | date: "%B" %} 
+
+      {% case m %}
+        {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
+        {% when 'September' %}Sept.
+        {% else %}{{ page.date | date: "%b" }}.
+        {% endcase %}
+      {% case d %}
+        {% when '1' or '21' or '31' %}{{ d }}st
+        {% when '2' or '22' %}{{ d }}nd
+        {% when '3' or '23' %}{{ d }}rd
+        {% else %}{{ d }}th,
+        {% endcase %}
+        {{ page.date | date: "%Y" }}
+
+      &#8901;
+
+      {% assign words = content | number_of_words %}
+      {% if words < 360 %}
+        1
+      {% else %}
+        {{ words | divided_by:180 }}
+      {% endif %}
+      min read
+    </div>
+  </div>
+
+  <div class="background-image" style="background-image: url('{{ site.baseurl }}/{% if page.heading-img %}{{ page.heading-img }}{% else %}{{ site.heading-img }}{% endif %}')"></div>
+</div>
+
+<section class="container animated post-wrapper">
+  
+  <!-- Post content -->
+  <article class="post">
+    {{ content }}
+  </article>
+
+  <!-- Posts pagination -->
+  <ul class="posts-pagination">
+    {% if page.previous.url %}
+      <li class="previous">
+        <a class="pagination-item" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" title="{{page.previous.title}}">&#8592; Previous post</a>
+      </li>
+    {% endif %}
+    {% if page.next.url %}
+      <li class="next">
+        <a class="pagination-item" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" title="{{page.next.title}}">Next post &#8594;</a>
+      </li>
+    {% endif %}
+  </ul>
+
+</section>

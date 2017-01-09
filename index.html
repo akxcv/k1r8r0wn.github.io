@@ -38,6 +38,16 @@ layout: page
             {% else %}{{ d }}th,
             {% endcase %}
             {{ post.date | date: "%Y" }}
+
+          &#8901;
+
+          {% assign words = content | number_of_words %}
+          {% if words < 360 %}
+            1
+          {% else %}
+            {{ words | divided_by:180 }}
+          {% endif %}
+          min read
         </p>
       </a>
     </div>
@@ -93,7 +103,7 @@ layout: page
 
   <hr class="small">
 
-  <ul class="pagination">
+  <ul class="pages-pagination">
     {% if paginator.previous_page %}
       <li class="previous">
         {% if paginator.previous_page == 1 %}
