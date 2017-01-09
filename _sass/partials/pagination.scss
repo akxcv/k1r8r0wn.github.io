@@ -2,6 +2,8 @@
   Pagination
 ==================================== */
 
+/* ----- Pages pagination ----- */
+
 // Breakpoint variables
 
 $pagination-breakpoint1:         320px;
@@ -24,7 +26,7 @@ $pagination-item-hover:          #795548;
 $pagination-item-active:         #795548;
 $pagination-item-active-color:   #fdf6e3;
 
-.pagination {
+.pages-pagination {
   margin: $pagination-margin;
   padding: 0;
   text-align: center;
@@ -189,5 +191,31 @@ $pagination-item-active-color:   #fdf6e3;
     .pagination-indicator--offset-9 {
       display: none;
     }
+  }
+}
+
+/* ----- Posts pagination ----- */
+
+.posts-pagination {
+  height: 30px;
+  margin-top: 2em;
+  margin-bottom: 0;
+  padding-left: 0;
+
+  .pagination-item {
+    padding: .4em;
+
+    &:hover {
+      background-color: $pagination-item-hover;
+      color: $pagination-item-active-color;
+    }
+  }
+
+  .previous {
+    float: left;
+  }
+
+  .next {
+    float: right;
   }
 }

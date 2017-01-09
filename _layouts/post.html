@@ -40,4 +40,18 @@ layout: default
     {{ content }}
   </article>
 
+  <!-- Posts pagination -->
+  <ul class="posts-pagination">
+    {% if page.previous.url %}
+      <li class="previous">
+        <a class="pagination-item" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" title="{{page.previous.title}}">&#8592; Previous post</a>
+      </li>
+    {% endif %}
+    {% if page.next.url %}
+      <li class="next">
+        <a class="pagination-item" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" title="{{page.next.title}}">Next post &#8594;</a>
+      </li>
+    {% endif %}
+  </ul>
+
 </section>
