@@ -3,18 +3,10 @@ layout: default
 ---
 
 <!-- Heading -->
-<div class="heading-wrapper">
-  <div class="page-heading container">
-    <h1>{% if page.title %}{{ page.title }}{% else %}Journal{% endif %}</h1>
-    <hr class="small">
-    <h2 class="subheading">{% if page.title %}{{ page.description }}{% else %}Staff I've written{% endif %}</h2>
-  </div>
+{% include heading.html %}
 
-  <div class="background-image" style="background-image: url('{{ site.baseurl }}/{% if page.heading-img %}{{ page.heading-img }}{% else %}{{ site.heading-img }}{% endif %}')"></div>
-</div>
-
-<!-- Journal -->
-<section class="journal-wrapper container animated">
+<!-- List -->
+<section class="list-wrapper container animated">
 
   {{ content }}
 

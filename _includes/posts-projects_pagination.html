@@ -1,0 +1,12 @@
+<ul class="posts-projects-pagination">
+  {% if page.previous.url %}
+    <li class="previous">
+      <a class="pagination-item" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" title="Project{{page.previous.title}}">{% if page.category == 'post' %}&#8592; Read previous post{% else %}&#8592; View previous project{% endif %}</a>
+    </li>
+  {% endif %}
+  {% if page.next.url %}
+    <li class="next">
+      <a class="pagination-item" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" title="{{page.next.title}}">{% if page.category == 'post' %}Read next post &#8594;{% else %}View next project &#8594;{% endif %}</a>
+    </li>
+  {% endif %}
+</ul>

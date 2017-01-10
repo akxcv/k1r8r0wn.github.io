@@ -1,0 +1,11 @@
+<div class="heading-wrapper">
+  <div class="page-heading container">
+    <h1 class='title'>{{ page.title }}</h1>
+    {% if page.subtitle %}
+      <hr class="small">
+      <h2 class="subtitle">{{ page.subtitle }}</h2>
+    {% endif %}
+  </div>
+
+  <div class="background-image" style="background-image: url('{{ site.baseurl }}/{% if page.heading-img %}{{ page.heading-img }}{% else %}{{ site.heading-img }}{% endif %}')"></div>
+</div>

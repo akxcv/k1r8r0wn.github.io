@@ -4,17 +4,14 @@
 
 .highlight {
   margin: 0;
-
-  pre {
-    background-color: $dark-brown;
-    border-left: 2px solid $brown;
-    font-family: $monospace;
-    font-size: .85em;
-    margin: 2rem 0;
-    overflow: auto;
-    padding: 1.5rem 3.5%;
-  }
-
+  background-color: $dark-brown;
+  border-left: 2px solid $brown;
+  font-family: $monospace;
+  font-size: .85em;
+  margin: 2rem 0;
+  overflow: auto;
+  padding: 1.5rem 3.5%;
+  
   .c { color: #586e75 } /* Comment */
   .err { color: #93a1a1 } /* Error */
   .g { color: #93a1a1 } /* Generic */

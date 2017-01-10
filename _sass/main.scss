@@ -8,6 +8,7 @@
 
 @import 'modules/variables';
 @import 'modules/helpers';
+@import 'modules/mixins';
 @import 'modules/icons';
 @import 'modules/animations';
 @import 'modules/code_syntax';
@@ -17,8 +18,8 @@
 @import 'partials/global';
 @import 'partials/header';
 @import 'partials/heading';
-@import 'partials/journal';
-@import 'partials/post';
+@import 'partials/list';
+@import 'partials/post-project';
 @import 'partials/pagination';
 @import 'partials/footer';
 @import 'partials/404';

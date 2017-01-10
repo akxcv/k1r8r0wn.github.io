@@ -2,7 +2,7 @@
   Heading
 ==================================== */
 
-/* Background image */
+/* ----- Background image ----- */
 
 // Variables
 
@@ -27,7 +27,7 @@ $background-image-height:        $heading-wrapper-height * 2;
   width: 100%;
 }
 
-/* Page heading */
+/* ----- Page heading ----- */
 
 .page-heading {
   color: $white;
@@ -35,7 +35,7 @@ $background-image-height:        $heading-wrapper-height * 2;
   padding: 5em 2em;
   z-index: 1;
 
-  h1 {
+  .title {
     margin-top: 0;
     font-size: calc(2.5em + .4vw);
   }
@@ -44,11 +44,12 @@ $background-image-height:        $heading-wrapper-height * 2;
     border-color: $white;
   }
 
-  .subheading {
+  .subtitle {
     margin: 10px 0 0;
   }
 
   .meta {
+    color: $white;
     margin-top: 1em;
   }
 }
