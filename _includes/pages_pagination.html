@@ -1,0 +1,104 @@
+{% if previous_page or next_page %}
+  <!-- Pages pagination -->
+
+  {% assign limit = 5 %}
+  {% if site.paginate_limit %}
+    {% assign limit = site.paginate_limit %}
+  {% endif %}
+  {% assign limitmin = limit | minus: 2 %}
+  {% assign offset = limitmin | divided_by: 2 %}
+  {% assign limitprev = paginator.page | minus: offset %}
+  {% assign limitnext = paginator.page | plus: offset %}
+  {% assign totalpages = paginator.total_pages %}
+
+  {% if limitprev <= 1 %}
+    {% assign limitprevfix = limitprev | minus: 1 %}
+    {% assign limitprev = 0 %}
+    {% assign limitnext = limitnext | minus: limitprevfix | plus: 1 %}
+  {% endif %}
+
+  {% if limitnext >= totalpages %}
+    {% assign limitnextfix = totalpages | minus: limitnext | minus: 1 %}
+    {% assign limitnext = totalpages %}
+    {% assign limitprev = limitprev | plus: limitnextfix %}
+  {% endif %}
+
+  {% assign dots_prev = limitprev | minus: 1 %}
+  {% assign dots_next = totalpages | minus: 1 %}
+  {% assign max_next = totalpages | minus: offset | minus: 1 %}
+
+  {% if totalpages > limit %}
+    {% for count in (2..paginator.total_pages) %}
+      {% if count == dots_prev  %}
+        {% assign indicator_first = ' pagination-indicator--active' %}
+      {% endif %}
+      {% if count == dots_next and paginator.page < max_next %}
+        {% assign indicator_last = ' pagination-indicator--active' %}
+      {% endif %}
+      {% if forloop.first %}
+        {% assign relative_first = paginator.page | minus: forloop.index | divided_by: 1 %}
+      {% endif %}
+      {% if forloop.last %}
+        {% assign relative_last = paginator.page | minus: forloop.index | replace: '-', '' | divided_by: 1 | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  <hr class="small">
+
+  <ul class="pages-pagination">
+    {% if paginator.previous_page %}
+      <li class="previous">
+        {% if paginator.previous_page == 1 %}
+          <a class="pagination-item" href="{{ "/" | prepend: site.baseurl }}">&#8592;</a>
+        {% else %}
+          <a class="pagination-item" href="{{ paginator.previous_page_path }}">&#8592;</a>
+        {% endif %}
+      </li>
+    {% endif %}
+
+    {% unless paginator.page == 1 %}
+      <li class="page first">
+        <a class="pagination-item" href="{{ "/" | prepend: site.baseurl }}">1</a>
+      </li>
+      <li class="pagination-indicator{{ indicator_first }} pagination-indicator--offset-{{ relative_first }}"><span>...</span></li>
+      {% else %}
+      <li class="page first current-page">
+        <span class="pagination-item"><span>1</span></span>
+      </li>
+    {% endunless %}
+
+    {% for count in (2..paginator.total_pages) %}
+      {% if count >= limitprev and count <= limitnext %}
+        {% assign relative_to_current = paginator.page | minus: count | replace: '-', '' | divided_by: 1 %}
+        {% unless count == totalpages %}
+          <li class="page offset-{{relative_to_current}}{% if count == paginator.page %} current-page{% endif %}">
+            {% if count == paginator.page %}
+              <span class="pagination-item"><span>{{ count }}</span></span>
+            {% else %}
+              <a class="pagination-item" href="{{ page.paginate_root | append: '/page' | append: count | append: '/' | replace: '//', '/' }}">{{ count }}</a>
+            {% endif %}
+          </li>
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+
+    {% unless paginator.page == totalpages %}
+      <li class="pagination-indicator{{ indicator_last }} pagination-indicator--offset-{{ relative_last }}"><span>...</span></li>
+      <li class="page last">
+        <a class="pagination-item" href="{{ page.paginate_root | append: '/page' | append: totalpages | append: '/' | replace: '//', '/' }}">{{ totalpages }}</a>
+      </li>
+    {% else %}
+      <li class="page last current-page">
+        <span class="pagination-item"><span>{{ totalpages }}</span></span>
+      </li>
+    {% endunless %}
+
+    {% if paginator.next_page %}
+      <li class="next">
+        <a class="pagination-item" href="{{ paginator.next_page_path }}">&#8594;</a>
+      </li>
+    {% endif %}
+  </ul>
+
+{% endif %}

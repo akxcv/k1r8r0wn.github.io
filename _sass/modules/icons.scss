@@ -16,39 +16,31 @@
   speak: none;
 }
 
-.icon-tag {
-  &::before {
-    content: "\e900";
-  }
+.icon-tag::before {
+  content: "\e900";
 }
 
-.icon-heart {
-  font-size: .8em;
-  &::before{
-    content: "\e901";
-  }
+.icon-heart::before {
+  font-size: .6em;
+  content: "\e901";
 }
 
-.icon-feed {
-  &::before {
-    content: "\e907";
-  }
+.icon-feed::before {
+  content: "\e907";
 }
 
-.icon-twitter {
-  &::before {
-    content: "\e908";
-  }
+.icon-twitter::before {
+  content: "\e908";
 }
 
-.icon-stack-overflow {
-  &::before {
-    content: "\e909";
-  }
+.icon-stack-overflow::before {
+  content: "\e909";
 }
 
-.icon-github {
-  &::before {
-    content: "\e90b";
-  }
+.icon-github::before {
+  content: "\e90b";
+}
+
+.icon-code:before {
+  content: "\ea80";
 }

@@ -194,9 +194,9 @@ $pagination-item-active-color:   #fdf6e3;
   }
 }
 
-/* ----- Posts pagination ----- */
+/* ----- Posts/projects pagination ----- */
 
-.posts-pagination {
+.posts-projects-pagination {
   height: 30px;
   margin-top: 2em;
   margin-bottom: 0;
@@ -204,11 +204,6 @@ $pagination-item-active-color:   #fdf6e3;
 
   .pagination-item {
     padding: .4em;
-
-    &:hover {
-      background-color: $pagination-item-hover;
-      color: $pagination-item-active-color;
-    }
   }
 
   .previous {

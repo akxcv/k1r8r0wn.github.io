@@ -1,0 +1,53 @@
+<div class="heading-wrapper">
+  <div class="page-heading container">
+    <h1 class="title">{{ page.title }}</h1>
+    
+    <hr class="small">
+
+    {% if page.subtitle %}
+      <h2 class="subtitle">{{ page.subtitle }}</h2>
+    {% endif %}
+
+    <p class="meta">
+      {% if page.category == 'post' %}
+        Posted on
+
+        {% assign d = page.date | date: "%-d" %} 
+        {% assign m = page.date | date: "%B" %} 
+
+        {% case m %}
+          {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
+          {% when 'September' %}Sept.
+          {% else %}{{ page.date | date: "%b" }}.
+          {% endcase %}
+        {% case d %}
+          {% when '1' or '21' or '31' %}{{ d }}st
+          {% when '2' or '22' %}{{ d }}nd
+          {% when '3' or '23' %}{{ d }}rd
+          {% else %}{{ d }}th,
+          {% endcase %}
+          {{ page.date | date: "%Y" }}
+
+        &#8901;
+
+        {% assign words = content | number_of_words %}
+        {% if words < 360 %}
+          1
+        {% else %}
+          {{ words | divided_by:180 }}
+        {% endif %}
+        min read
+      {% else %}
+        {% if page.in_development == 'true' %}
+          In development
+        {% else %}
+          Released in {{ page.date | date: "%Y" }}
+        {% endif %}
+          &#8901; {{ page.tech }}
+      {% endif %}
+    </p>
+
+  </div>
+
+  <div class="background-image" style="background-image: url('{{ site.baseurl }}/{% if page.heading-img %}{{ page.heading-img }}{% else %}{{ site.heading-img }}{% endif %}')"></div>
+</div>

@@ -1,15 +1,15 @@
 /* =================================
-  Post
+  Post/Project styles
 ==================================== */
 
-.post-wrapper {
+.wrapper {
   padding-bottom: 2em;
   padding-top: 1em;
   @include animation-name(fadeInUp);
-}
 
-.post {
-  padding: 1em 0;
+  article {
+    padding: 1em 0;
+  }
 }
 
 blockquote {

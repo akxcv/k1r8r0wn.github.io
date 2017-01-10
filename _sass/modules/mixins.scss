@@ -1,0 +1,48 @@
+// ==================================
+//  Mixins
+// ==================================
+ 
+@mixin color-selection($tech) {
+  &.#{$tech} {
+    @if $tech == 'ruby' {
+      border-left: 2px solid $red;
+
+      &:focus,
+      &:hover {
+        background-color: transparentize($red, 0.9);
+      }
+    }
+    @elseif $tech == 'python' {
+      border-left: 2px solid $blue;
+
+      &:focus,
+      &:hover {
+        background-color: transparentize($blue, 0.9);
+      }
+    }
+    @elseif $tech == 'css' {
+      border-left: 2px solid $green;
+
+      &:focus,
+      &:hover {
+        background-color: transparentize($green, 0.9);
+      }
+    }
+    @elseif $tech == 'javascript' {
+      border-left: 2px solid $yellow;
+
+      &:focus,
+      &:hover {
+        background-color: transparentize($yellow, 0.9);
+      }
+    }
+    @else {
+      border-left: 2px solid $brown;
+
+      &:focus,
+      &:hover {
+        background-color: transparentize($brown, 0.9);
+      }
+    }
+  }
+}
