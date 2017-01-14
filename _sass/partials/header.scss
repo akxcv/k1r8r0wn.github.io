@@ -44,7 +44,7 @@ $horizontal-bar-mode: $medium-screen;
     }
 
     span {
-      background: $brown;  
+      background: $brown;
       height: 2px;
       left: 0;
       position: absolute;
@@ -69,7 +69,7 @@ $horizontal-bar-mode: $medium-screen;
     &.open span:nth-child(1) {
       left: 50%;
       top: 10px;
-      width: 0%;
+      width: 0;
     }
 
     &.open span:nth-child(2) {
@@ -83,7 +83,7 @@ $horizontal-bar-mode: $medium-screen;
     &.open span:nth-child(4) {
       left: 50%;
       top: 10px;
-      width: 0%;
+      width: 0;
     }
   }
 
@@ -138,11 +138,15 @@ $horizontal-bar-mode: $medium-screen;
   /* The nav items */
 
   .nav-link {
+    a.active {
+      color: $brown;
+    }
+
     @include media($horizontal-bar-mode) {
       display: inline;
       float: right;
 
-      > a {
+      a {
         display: inline-block;
         line-height: 40px;
         margin: 0 1.2em;

@@ -12,8 +12,8 @@ $footer-color: #fdf6e3;
   color: $footer-color;
   display: inline-block;
   padding: $base-spacing;
-  width: 100%;
   text-align: center;
+  width: 100%;
   @include clearfix;
   
   // special clearfix for footer to prevent blank space after it

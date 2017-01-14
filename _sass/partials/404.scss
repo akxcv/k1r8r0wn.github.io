@@ -3,10 +3,10 @@
 ==================================== */
 
 .error {
-  text-align: center;
   margin: 0 auto;
   max-width: 500px;
   padding: 1.5em;
+  text-align: center;
   @include animation-name(pulse);
 
   img {

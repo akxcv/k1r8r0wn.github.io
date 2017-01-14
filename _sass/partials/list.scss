@@ -27,13 +27,13 @@
 .projects-wrapper {
   $flex-box-gutter: .4em;
 
-  @include clearfix;
   align-items: stretch;
   clear: both;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
+  @include clearfix;
 
   .project {
     align-self: stretch;
