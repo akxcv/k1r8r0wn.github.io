@@ -13,18 +13,20 @@
     <nav role="navigation">
       <ul class="navigation-menu show">
         <!-- Logo -->
-        <li class="nav-link logo">
-          <a href="{{ site.baseurl }}/" class="logo">
+        <li class="logo">
+          <a href="{{ site.baseurl }}/">
             <img src="{{ "/assets/img/logo.svg" | prepend: site.baseurl }}" alt="Logo">
           </a>
         </li>
         <!-- Navigation -->
-        {% assign sorted_pages = site.pages | sort:'weight' %}
-        {% for page in sorted_pages %}
-          {% if page.url != '/404' %}
-            <li class="nav-link">
-              <a class="page" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-            </li>
+        {% assign nav_pages = site.html_pages | sort: 'nav_weight' %}
+        {% for p in nav_pages %}
+          {% if p.nav_weight %}
+            {% unless p.url contains '/page' %}
+              <li class="nav-link">
+               <a href="{{ site.baseurl }}{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>{{ p.title}}</a>
+              </li>
+            {% endunless %}
           {% endif %}
         {% endfor %}
       </ul>

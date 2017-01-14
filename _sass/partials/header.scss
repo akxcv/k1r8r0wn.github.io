@@ -12,6 +12,7 @@ $navigation-item-nudge: 2.2em;
 $horizontal-bar-mode: $medium-screen;
 
 .navigation {
+
   /* Mobile view */
 
   .mobile-logo {
@@ -111,18 +112,37 @@ $horizontal-bar-mode: $medium-screen;
     }
   }
 
-  /* The nav items */
-
+  .logo,
   .nav-link {
     line-height: 40px;
     padding: .5em 0;
     text-align: center;
+  }
 
+  /* Logo */
+
+  .logo {
+    display: none;
+    float: left;
+
+    @include media($horizontal-bar-mode) {
+      display: inline;
+    }
+
+    img {
+      height: $navigation-logo-height;
+      margin-bottom: -$navigation-logo-height / 3;
+    }
+  }
+
+  /* The nav items */
+
+  .nav-link {
     @include media($horizontal-bar-mode) {
       display: inline;
       float: right;
 
-      a.page {
+      > a {
         display: inline-block;
         line-height: 40px;
         margin: 0 1.2em;
@@ -132,27 +152,7 @@ $horizontal-bar-mode: $medium-screen;
           margin-right: 0;
         }
 
-        &::before,
-        &::after {
-          position: absolute;
-          pointer-events: none;
-          @include transition(transform .5s, opacity .5s);
-        }
-
-        &::before {
-          content: attr(data-hover);
-        }
-
-        &::after {
-          background: $brown;
-          bottom: 0;
-          content: '';
-          height: 2px;
-          left: 0;
-          opacity: 0;
-          width: 100%;
-          @include transform(translateY(5px));
-        }
+        @include nav-link-style;
 
         &:hover::before,
         &:focus::before {
@@ -165,15 +165,16 @@ $horizontal-bar-mode: $medium-screen;
           opacity: 1;
           @include transform(translateY(0));
         }
-      }
-    }
 
-    &.logo {
-      display: none;
-      float: left;
+        &.active {
+          @include nav-link-style;
 
-      @include media($horizontal-bar-mode) {
-        display: inline;
+          &::after,
+          &::after {
+            opacity: 1;
+            @include transform(translateY(0));
+          }
+        }
       }
     }
 
@@ -187,10 +188,5 @@ $horizontal-bar-mode: $medium-screen;
         margin: 0;
       }
     }
-  }
-
-  .logo img {
-    height: $navigation-logo-height;
-    margin-bottom: -$navigation-logo-height / 3;
   }
 }

@@ -2,7 +2,7 @@
 layout: page
 title: 'Journal'
 subtitle : "Staff I've written"
-weight: 2
+nav_weight: 2
 ---
 
 {% if site.posts.size == 0 %}
@@ -61,5 +61,4 @@ weight: 2
 
 {% if site.posts.size > 5 %}
   {% include pages_pagination.html %}
-{% endif %}  
-
+{% endif %}
