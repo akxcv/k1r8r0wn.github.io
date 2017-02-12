@@ -40,3 +40,9 @@
   @include animation-duration(2s);
   @include animation-fill-mode(both);
 }
+
+/* For images */
+
+.img-responsive {
+  width: 100%;
+}
