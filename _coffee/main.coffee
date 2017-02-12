@@ -11,6 +11,3 @@ $(document).ready ->
     $navMenu.slideToggle ->
       if $navMenu.is(':hidden')
         $navMenu.removeAttr 'style'
-      return
-    return
-  return

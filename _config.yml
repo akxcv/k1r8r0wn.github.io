@@ -8,7 +8,7 @@ keywords:
   jekyll sql sqlite mysql postgresql html5 mailchimp css3 bootstrap sass compass javascript jquery 
   coffeescript git russia siberia omsk
 
-heading-img: assets/img/journal-bg.jpg
+heading-img: assets/img/sky.jpg
 
 baseurl: '' # the subpath of your site, e.g. /blog
 url: 'https://k1r8r0wn.github' # the base hostname & protocol for your site, e.g. http://example.com

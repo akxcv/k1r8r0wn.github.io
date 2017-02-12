@@ -38,6 +38,10 @@ body {
   }
 }
 
+.container.animated {
+  @include animation-name(fadeInUp);
+}
+
 /* ----- Typography ----- */
 
 h1,
