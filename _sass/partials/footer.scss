@@ -7,6 +7,11 @@
 $base-spacing: 1.5em;
 $footer-color: #fdf6e3;
 
+.footer,
+.footer::after {
+  height: auto;
+}
+
 .footer {
   background: $dark-brown;
   color: $footer-color;
