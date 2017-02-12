@@ -144,8 +144,12 @@ $horizontal-bar-mode: $medium-screen;
   }  
 
   .nav-link {
-    a.active {
-      color: $brown;
+    a {
+      display: block;
+
+      &.active {
+        color: $brown;
+      }
     }
 
     @include media($horizontal-bar-mode) {
