@@ -2,7 +2,7 @@
   Global components
 ==================================== */
 
-// variables
+// Variables
 $footer-height: 121px;
 
 * {
@@ -60,6 +60,16 @@ a {
   &:hover {
     color: $brown;
     @include transition(all .5s ease-in);
+  }
+}
+
+article a,
+.about a {
+  color: $light-brown; // special color for links in articles & about page text
+
+  &:focus,
+  &:hover {
+    color: $brown;
   }
 }
 

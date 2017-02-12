@@ -136,6 +136,12 @@ $horizontal-bar-mode: $medium-screen;
   }
 
   /* The nav items */
+  .nav-links-wrapper {
+    @include media($horizontal-bar-mode) {
+      padding: .5em 0;
+      float: right;
+    }
+  }  
 
   .nav-link {
     a.active {
@@ -144,7 +150,6 @@ $horizontal-bar-mode: $medium-screen;
 
     @include media($horizontal-bar-mode) {
       display: inline;
-      float: right;
 
       a {
         display: inline-block;
