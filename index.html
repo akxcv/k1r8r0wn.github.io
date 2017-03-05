@@ -28,8 +28,8 @@ nav_weight: 1
         <div class="meta">
           Posted on
 
-          {% assign d = post.date | date: "%-d" %} 
-          {% assign m = post.date | date: "%B" %} 
+          {% assign d = post.date | date: "%-d" %}
+          {% assign m = post.date | date: "%B" %}
 
           {% case m %}
             {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
@@ -44,17 +44,28 @@ nav_weight: 1
             {% endcase %}
             {{ post.date | date: "%Y" }}
 
-          &#8901;
-
           {% assign words = post.content | number_of_words %}
           {% if words < 360 %}
-            1
+            &#126; 1
           {% else %}
-            {{ words | divided_by:180 }}
+            &#126; {{ words | divided_by:180 }}
           {% endif %}
           min read
         </div>
       </a>
+
+      <!-- Tags -->
+      <ul class="tags">
+        {% for tag in post.tags %}
+          <li>
+            <a href="/tags#{{ tag }}" class="tag">
+              <i class="icon-tag"></i>
+              {{ tag }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+
     </div>
   {% endfor %}
 {% endif %}
