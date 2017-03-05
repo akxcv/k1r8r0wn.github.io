@@ -1,11 +1,10 @@
 /* =================================
-  Post/Project styles
+  Post/Project
 ==================================== */
 
-.wrapper {
+.container.post,
+.container.project {
   padding-bottom: 2em;
-  padding-top: 1em;
-  @include animation-name(fadeInUp);
 
   article {
     padding: 1em 0;

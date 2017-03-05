@@ -2,12 +2,8 @@
   Global components
 ==================================== */
 
-// variables
+// Variables
 $footer-height: 121px;
-
-* {
-  margin: 0;
-}
 
 html,
 body {
@@ -38,6 +34,10 @@ body {
   }
 }
 
+.container.animated {
+  @include animation-name(fadeInUp);
+}
+
 /* ----- Typography ----- */
 
 h1,
@@ -56,6 +56,16 @@ a {
   &:hover {
     color: $brown;
     @include transition(all .5s ease-in);
+  }
+}
+
+article a,
+.about a {
+  color: $light-brown; // special color for links in articles & about page text
+
+  &:focus,
+  &:hover {
+    color: $brown;
   }
 }
 
