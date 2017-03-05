@@ -10,6 +10,11 @@ $hamburgerIcon.on 'click', (e) ->
     if $navMenu.is(':hidden')
       $navMenu.removeAttr 'style'
 
+# Smooth scroll to tag
+$('.tag').on 'click', ->
+  $id = $(this).attr('href')
+  $('html, body').animate({ scrollTop: $($id).offset().top }, 1000)
+
 # Skills chart
 $chart = $('#chart')
 

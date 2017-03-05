@@ -45,6 +45,19 @@
       {% endif %}
     </p>
 
+    {% if page.category == 'post' %}
+      <!-- Tags -->
+      <ul class="tags">
+        {% for tag in page.tags %}
+          <li>
+            <a href="/tags#{{ tag }}" class="tag bordered dark">
+              <i class="icon-tag"></i>
+              {{ tag }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
   </div>
 
   <div class="background-image" style="background-image: url('{{ site.baseurl }}/{% if page.heading-img %}{{ page.heading-img }}{% else %}{{ site.heading-img }}{% endif %}')"></div>

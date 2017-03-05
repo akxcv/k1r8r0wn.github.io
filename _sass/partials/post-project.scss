@@ -22,6 +22,36 @@
   }
 }
 
+.tags {
+  padding: 0;
+
+  li {
+    display: inline-block;
+
+    .tag {
+      display: block;
+      margin: 0 10px 10px 0;
+
+      &.bordered {
+        color: $white;
+        background: $brown;
+        line-height: 26px;
+        padding: 1px 20px;
+        position: relative;
+      }
+
+      &.dark {
+        background: $dark-brown;
+      }
+
+      i {
+        font-size: .8em;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
 blockquote {
   border-left: 2px solid $brown;
   font-style: italic;
