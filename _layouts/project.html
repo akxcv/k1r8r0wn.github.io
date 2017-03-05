@@ -7,13 +7,14 @@ layout: default
 
 <!-- Content container -->
 <section class="container animated project">
-  
+
   <!-- Project content -->
   <article>
     {{ content }}
   </article>
 
-  <!-- Projects pagination -->
-  {% include posts-projects_pagination.html %}
-
+  {% if page.previous.url or page.next.url %}
+    <!-- Projects pagination -->
+    {% include posts-projects_pagination.html %}
+  {% endif %}
 </section>

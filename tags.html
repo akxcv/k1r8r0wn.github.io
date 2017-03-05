@@ -16,31 +16,39 @@ subtitle:   All in one page
 
 {% assign tag_words = site_tags | split:',' | sort %}
 
-<!-- List of all tags -->
-<ul class="tags">
-  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-    {% capture this_word %}{{ tag_words[item] }}{% endcapture %}
-    <li>
-      <a href="#{{ this_word | cgi_escape }}" class="tag bordered">
-        <i class="icon-tag"></i>
-        {{ this_word }}
-        <span>({{ site.tags[this_word].size }})</span>
-      </a>
-    </li>
-  {% endunless %}{% endfor %}
-</ul>
+{% if site.tags.size == 0 %}
+  <section class="container-table no-content">
+    <div class="vertical-center">
+      <h3>There is no tags here yet!</h3>
+    </div>
+  </section>
+{% else %}
+  <!-- List of all tags -->
+  <ul class="tags">
+    {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+      {% capture this_word %}{{ tag_words[item] }}{% endcapture %}
+      <li>
+        <a href="#{{ this_word | cgi_escape }}" class="tag bordered">
+          <i class="icon-tag"></i>
+          {{ this_word }}
+          <span>({{ site.tags[this_word].size }})</span>
+        </a>
+      </li>
+    {% endunless %}{% endfor %}
+  </ul>
 
-<!-- Posts by Tag -->
-<div class="post-by-tag">
-  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-    {% capture this_word %}{{ tag_words[item] }}{% endcapture %}
-    <h2 id="{{ this_word | cgi_escape }}">{{ this_word }}</h2>
-    {% for post in site.tags[this_word] %}{% if post.title != null %}
-      <div>
-        <span>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </span>
-      </div>
-    {% endif %}{% endfor %}
-  {% endunless %}{% endfor %}
-</div>
+  <!-- Posts by Tag -->
+  <div class="post-by-tag">
+    {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+      {% capture this_word %}{{ tag_words[item] }}{% endcapture %}
+      <h2 id="{{ this_word | cgi_escape }}">{{ this_word }}</h2>
+      {% for post in site.tags[this_word] %}{% if post.title != null %}
+        <ul>
+          <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </li>
+        </ul>
+      {% endif %}{% endfor %}
+    {% endunless %}{% endfor %}
+  </div>
+{% endif %}

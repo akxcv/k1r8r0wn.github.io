@@ -25,7 +25,7 @@ body {
   margin-bottom: 0;
   min-height: 100%;
   @include media($medium-screen) {
-    margin-bottom: -$footer-height; // equal to footer height  
+    margin-bottom: -$footer-height; // equal to footer height
   }
 
   &::after {
@@ -73,7 +73,7 @@ p {
   line-height: 1.5;
 }
 
-li {
+li.unstyled {
   list-style: none;
 }
 
