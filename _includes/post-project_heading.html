@@ -1,7 +1,7 @@
 <div class="heading-wrapper">
   <div class="page-heading container">
     <h1 class="title">{{ page.title }}</h1>
-    
+
     <hr class="small">
 
     {% if page.subtitle %}
@@ -12,8 +12,8 @@
       {% if page.category == 'post' %}
         Posted on
 
-        {% assign d = page.date | date: "%-d" %} 
-        {% assign m = page.date | date: "%B" %} 
+        {% assign d = page.date | date: "%-d" %}
+        {% assign m = page.date | date: "%B" %}
 
         {% case m %}
           {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
@@ -28,13 +28,11 @@
           {% endcase %}
           {{ page.date | date: "%Y" }}
 
-        &#8901;
-
         {% assign words = content | number_of_words %}
         {% if words < 360 %}
-          1
+          &#126; 1
         {% else %}
-          {{ words | divided_by:180 }}
+          &#126; {{ words | divided_by:180 }}
         {% endif %}
         min read
       {% else %}
