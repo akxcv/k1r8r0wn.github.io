@@ -1,235 +1,27 @@
-/* =================================
-  Base elements styles
-==================================== */
+// Import vendor styles
 
-html {
-  height: 100%;
-}
+@import '../vendor/css/normalize';
+@import '../vendor/css/bourbon/bourbon';
+@import '../vendor/css/neat/neat';
 
-body {
-  background: #fdf5e6; /* oldlace */
-  font-family: 'Fira Mono', monospace;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    /* Better Font Rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  margin: 0;
-}
+// Import modules
 
-/* ---- Typography ---- */
+@import 'modules/variables';
+@import 'modules/helpers';
+@import 'modules/mixins';
+@import 'modules/icons';
+@import 'modules/animations';
+@import 'modules/code_syntax';
 
-h1, h2, h3, h4, h5, h6, p, ul, li {
-  color: #424652; /* blue_grey */
-}
+// Import partials
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inconsolata', Helvetica, Arial, sans-serif;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.75rem;
-}
-
-h4 {
-  font-size: 1.375rem;
-}
-
-h5 {
-  font-size: 1.25rem;
-}
-
-h6 {
-  font-size: 1rem;
-}
-
-p,
-li {
-  font-size: 1.1rem;
-  line-height: 1.8;
-}
-
-p,
-ul,
-ol {
-  margin: 0 0 1.6em;
-}
-
-hr {
-  display: block;
-  width: 3em;
-  height: 2px;
-  border: 0;
-  border-top: 2px solid #774a0a; /* brown */
-  margin: 2rem 0;
-  text-align: left;
-}
-
-a {
-  text-decoration: none;
-  color: #424652; /* blue_grey */
-  outline: none;
-  -webkit-transition: .3s;
-     -moz-transition: .3s;
-      -ms-transition: .3s;
-       -o-transition: .3s;
-          transition: .3s;
-}
-
-a:hover,
-a:focus {
-  outline: none;
-  color: #774a0a; /* brown */
-}
-
-@media screen and (min-width: 500px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-}
-
-/* =================================
-  Section
-==================================== */
-
-/* Logo */
-
-.logo_wrapper {
-  width: 120px;
-  height: 120px;
-  margin:  0 auto;
-}
-
-#logo img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s ease-in;
-}
-
-@media screen and (min-width: 600px) {
-  #logo img:hover {
-    transform: scale(1.2);
-  }
-}
-
-/* Message */
-
-.message {
-  display: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-
-/* =================================
-  Footer
-==================================== */
-
-.footer {
-  padding: 2.5em 0 1em;
-  border-top: 1px solid #dadadb; /* light grey */
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  left: 0;
-  text-align: center;
-}
-
-.copyright {
-  margin: 1.5em 0 0;
-  font-size: .9em;
-}
-
-.social_me a {
-  padding: 0 .5em;
-}
-
-@media screen and (max-device-width: 737px) {
-  .footer {
-    position: relative;
-  }
-}
-
-/* =================================
-  Helpers
-==================================== */
-
-.centered {
-  height: 250px;
-  padding: 3em 0;
-}
-
-@media screen and (min-device-width: 737px) {
-  .centered {
-    height: 300px;
-    width: 300px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    -webkit-transform: translate(-50%, -50%);
-       -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-         -o-transform: translate(-50%, -50%);
-  }
-}
-
-/* =================================
-  Icons
-==================================== */
-
-@font-face {
-  font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?fhfqne');
-  src:  url('../fonts/icomoon.eot?fhfqne#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?fhfqne') format('truetype'),
-    url('../fonts/icomoon.woff?fhfqne') format('woff'),
-    url('../fonts/icomoon.svg?fhfqne#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  font-size: 1.5em;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-}
-
-.icon-github:before {
-  content: "\eab0";
-}
-
-.icon-instagram:before {
-  content: "\ea92";
-}
-
-.icon-twitter:before {
-  content: "\ea96";
-}
-
-.icon-linkedin:before {
-  content: "\eac9";
-}
-
-.icon-stackoverflow:before {
-  content: "\ead0";
-}
+@import 'partials/global';
+@import 'partials/header';
+@import 'partials/heading';
+@import 'partials/list';
+@import 'partials/post-project';
+@import 'partials/tags';
+@import 'partials/about';
+@import 'partials/pagination';
+@import 'partials/footer';
+@import 'partials/404';

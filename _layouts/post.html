@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<!-- Heading -->
+{% include post-project_heading.html %}
+
+<!-- Content container -->
+<section class="container animated post">
+
+  <!-- Post content-->
+  <article>
+    {{ content }}
+  </article>
+
+  {% if page.previous.url or page.next.url %}
+    <!-- Posts pagination -->
+    {% include posts-projects_pagination.html %}
+  {% endif %}
+
+  <!-- Disqus comments -->
+  <div id="disqus_thread">
+    {% include disqus_thread.html %}
+  </div>
+
+</section>

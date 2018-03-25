@@ -1,0 +1,90 @@
+/* =================================
+  Global components
+==================================== */
+
+// Variables
+$footer-height: 121px;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: $background;
+  color: $main;
+  font-family: $sans-serif;
+  font-size: $font-size;
+  min-width: 300px;
+    // for better font rendering
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.page-wrap {
+  margin-bottom: 0;
+  min-height: 100%;
+  @include media($medium-screen) {
+    margin-bottom: -$footer-height; // equal to footer height
+  }
+
+  &::after {
+    content: "";
+    display: block;
+  }
+}
+
+.container.animated {
+  @include animation-name(fadeInUp);
+}
+
+/* ----- Typography ----- */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $serif;
+}
+
+a {
+  color: $main;
+  text-decoration: none;
+    -smoothing-webkit-tap-highlight-color: rgba(0, 0, 0, 0); // prevent tap highlight color
+
+  &:focus,
+  &:hover {
+    color: $brown;
+    @include transition(all .5s ease-in);
+  }
+}
+
+article a,
+.about a {
+  color: $light-brown; // special color for links in articles & about page text
+
+  &:focus,
+  &:hover {
+    color: $brown;
+  }
+}
+
+p {
+  line-height: 1.5;
+}
+
+li.unstyled {
+  list-style: none;
+}
+
+hr.small {
+  border: 1px solid $brown;
+  margin: 15px auto;
+  max-width: 100px;
+}
+
+.meta {
+  color: $brown;
+  font-style: italic;
+  margin: 1em 0;
+}

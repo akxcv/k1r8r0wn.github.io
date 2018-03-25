@@ -1,0 +1,67 @@
+/* =================================
+  About
+==================================== */
+
+.about {
+  text-align: center;
+
+  .my-avatar {
+    margin: 2em auto;
+    width: 100px;
+
+    img {
+      border-radius: 50%;
+      display: block;
+      height: 100px;
+      margin: 0 auto;
+    }
+
+    &::after {
+      border-radius: 50%;
+      display: block;
+      position: relative;
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, $background 100%);
+      margin-top: -100px;
+      height: 100px;
+      content: '';
+    }
+  }
+
+  .my-story,
+  .my-skillset-chart {
+    margin-top: 3em;
+  }
+
+  .my-story i {
+    font-size: 1em;
+  }
+}
+
+#chart {
+  display: none;
+
+  @include media($small-screen) {
+    display: block;
+  }
+}
+
+#change-rotation {
+  display: block;
+  text-align: center;
+
+  @include media($small-screen) {
+      display: none;
+  }
+
+  img {
+    display: block;
+    height: 70px;
+    margin: 0 auto;
+    width: 70px;
+  }
+
+  p {
+    color: $brown;
+    margin-top: 1em;
+  }
+}

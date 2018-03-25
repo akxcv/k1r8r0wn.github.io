@@ -1,0 +1,37 @@
+<!-- Header -->
+<header class="navigation">
+  <div class="navigation-wrapper">
+    <a href="{{ site.baseurl }}/" class="mobile-logo">
+      <img src="{{ "/assets/img/logo.svg" | prepend: site.baseurl }}" alt="Logo">
+    </a>
+    <a href="/" class="hamburger-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+    <nav role="navigation">
+      <ul class="navigation-menu show">
+        <!-- Logo -->
+        <li class="logo">
+          <a href="{{ site.baseurl }}/">
+            <img src="{{ "/assets/img/logo.svg" | prepend: site.baseurl }}" alt="Logo">
+          </a>
+        </li>
+        <!-- Navigation -->
+        <div class="nav-links-wrapper">
+          {% assign nav_pages = site.html_pages | sort: 'nav_weight' %}
+          {% for p in nav_pages %}
+            {% if p.nav_weight %}
+              {% unless p.url contains '/page' %}
+                <li class="nav-link">
+                 <a href="{{ site.baseurl }}{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>{{ p.title}}</a>
+                </li>
+              {% endunless %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </ul>
+    </nav>
+  </div>
+</header>

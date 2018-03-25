@@ -1,0 +1,62 @@
+/* ==================================
+  Icons
+================================== */
+
+@include font-face("icons", "../fonts/icons", $file-formats: ttf eot woff svg);
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icons' !important; // use !important to prevent issues with browser extensions that change fonts
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-transform: none;
+  speak: none;
+}
+
+.icon-phoenix::before {
+  content: "\e900";
+}
+
+.icon-rails::before {
+  content: "\e901";
+}
+
+.icon-ruby::before {
+  content: "\e902";
+}
+
+.icon-elixir::before {
+  content: "\e903";
+}
+
+.icon-tag::before {
+  content: "\e904";
+}
+
+.icon-heart::before {
+  vertical-align: middle;
+  content: "\e905";
+}
+
+.icon-code::before {
+  content: "\ea80";
+}
+
+.icon-twitter::before {
+  content: "\ea96";
+}
+
+.icon-rss::before {
+  content: "\ea9b";
+}
+
+.icon-github::before {
+  content: "\eab0";
+}
+
+.icon-stackoverflow::before {
+  content: "\ead0";
+}

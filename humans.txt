@@ -1,0 +1,33 @@
+/*
+    humanstxt.org/
+    The humans responsible & technology colophon
+
+    k1r8r0wn.github.io
+*/
+
+// AUTHOR
+
+    Founder & Developer: Kirill Bobrov
+
+    Github:              https://github.com/k1r8r0wn
+    Stackoverflow:       https://stackoverflow.com/story/k1r8r0wn
+    Twitter:             https://twitter.com/k1r8r0wn
+
+    From:                Omsk, Russia
+
+// SITE
+
+    Web:                 https://k1r8r0wn.github.io
+    Language:            English, Russian
+
+// TECHNOLOGY
+
+    Markdown, HTML5, Liquid
+    SVG, Google Fonts,
+    CSS3, SASS, Bourbon, Neat, Refills,
+    JS, jQuery, CoffeeScript, Highcharts,
+    Jekyll
+
+// HOSTING
+
+    Proudly hosted by GitHub Pages

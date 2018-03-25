@@ -1,0 +1,26 @@
+/* =================================
+  404
+==================================== */
+
+.error {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 1.5em;
+  text-align: center;
+  @include animation-name(pulse);
+
+  img {
+    max-width: 350px;
+    width: 100%;
+  }
+
+  p {
+    line-height: 1.8;
+    margin-bottom: 2em;
+    padding: 0;
+  }
+
+  a {
+    color: $brown;
+  }
+}

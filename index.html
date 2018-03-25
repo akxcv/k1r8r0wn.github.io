@@ -1,21 +1,79 @@
 ---
-layout: default
+layout:     page
+title:      Journal
+subtitle:   Staff I've written
+nav_weight: 1
 ---
 
-<section class="centered">
-  <div class="logo_wrapper">
-    <a id="logo" href="/">
-      <img src="{{ "/assets/img/logo.svg" | prepend: site.baseurl }}" alt="Logo">
-    </a>
-  </div>
-  <div class="message-wrapper">
-    <div class="message">
-      <h4>Please stand by...</h4>
-      <p>This blog is currently under construction.</p>
+{% if site.posts.size == 0 %}
+  <section class="container-table no-content">
+    <div class="vertical-center">
+      <h3>Soon there will be a first post here...</h3>
     </div>
-    <div class="message">
-      <h4>Пожалуйста, подождите...</h4>
-      <p>Этот блог временно находится на этапе разработки.</p>
+  </section>
+{% else %}
+  {% for post in paginator.posts %}
+    <!-- Posts previews -->
+    <div class="preview">
+      <a href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="title">
+          {{ post.title }}
+        </h2>
+        {% if post.subtitle %}
+        <h3 class="subtitle">
+          {{ post.subtitle }}
+        </h3>
+        {% endif %}
+
+        <div class="meta">
+          Posted on
+
+          {% assign d = post.date | date: "%-d" %}
+          {% assign m = post.date | date: "%B" %}
+
+          {% case m %}
+            {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
+            {% when 'September' %}Sept.
+            {% else %}{{ post.date | date: "%b" }}.
+            {% endcase %}
+          {% case d %}
+            {% when '1' or '21' or '31' %}{{ d }}st
+            {% when '2' or '22' %}{{ d }}nd
+            {% when '3' or '23' %}{{ d }}rd
+            {% else %}{{ d }}th,
+            {% endcase %}
+            {{ post.date | date: "%Y" }}
+
+          &#8901;
+
+          {% assign words = post.content | number_of_words %}
+          {% if words <= 100 %}
+            &#60; 1
+          {% elsif words >= 100 && words < 360 %}
+            &#126; 1
+          {% else %}
+            &#126; {{ words | divided_by:180 }}
+          {% endif %}
+          min read
+        </div>
+      </a>
+
+      <!-- Tags -->
+      <ul class="tags">
+        {% for tag in post.tags %}
+          <li>
+            <a href="/tags#{{ tag }}" class="tag">
+              <i class="icon-tag"></i>
+              {{ tag }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+
     </div>
-  </div>
-</section>
+  {% endfor %}
+{% endif %}
+
+{% if site.posts.size > 5 %}
+  {% include pages_pagination.html %}
+{% endif %}

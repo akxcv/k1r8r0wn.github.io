@@ -1,0 +1,63 @@
+/* =================================
+  Post/Project
+==================================== */
+
+.container.post,
+.container.project {
+  padding-bottom: 2em;
+
+  article {
+    padding: 1em 0;
+  }
+
+  img {
+    display: block;
+    margin: 1em auto;
+    width: 100%;
+    @include animation-name(fadeIn);
+    @include animation-duration(3s);
+    @include media($small-screen) {
+      width: 50%;
+    }
+  }
+}
+
+.container.post article {
+  margin-bottom: 3em;
+}
+
+.tags {
+  padding: 0;
+
+  li {
+    display: inline-block;
+
+    .tag {
+      display: block;
+      margin: 0 10px 10px 0;
+
+      &.bordered {
+        color: $white;
+        background: $brown;
+        line-height: 26px;
+        padding: 3px 20px;
+      }
+
+      &.dark {
+        background: $dark-brown;
+      }
+
+      i {
+        font-size: .8em;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+blockquote {
+  border-left: 2px solid $brown;
+  font-style: italic;
+  margin: 0 0 20px;
+  padding: 10px 20px;
+}

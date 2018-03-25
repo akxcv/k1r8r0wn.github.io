@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<!-- Heading -->
+{% include heading.html %}
+
+<!-- Content -->
+<section class="container {% unless page.url contains '/tags' %} animated {% endunless %}">
+
+  {{ content }}
+
+</section>

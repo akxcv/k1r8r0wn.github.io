@@ -1,0 +1,44 @@
+---
+layout:     page
+title:      Projects
+subtitle:   Staff I've made
+permalink:  /projects/
+nav_weight: 2
+---
+
+{% if site.projects.size == 0 %}
+  <section class="container-table no-content">
+    <div class="vertical-center">
+      <h3>Soon there will be a first project here...</h3>
+    </div>
+  </section>
+{% else %}
+  <!-- Projects previews -->
+  <div class="preview projects-wrapper">
+    {% for project in site.projects %}
+      <a href="{{ project.url | prepend: site.baseurl }}" class="project {{ project.tech | downcase }}">
+        <h2 class="flex-title">{{ project.title }}</h2>
+        {% if project.subtitle %}
+          <h3 class="subtitle">
+            {{ project.subtitle }}
+          </h3>
+        {% endif %}
+        <div class="meta">
+          {% if project.in_development == 'true' %}
+            In development &#8901; {{ project.tech }}
+          {% else %}
+            Released in {{ project.date | date: "%Y" }} &#8901; {{ project.tech }}
+          {% endif %}
+        </div>
+
+        {% if project.in_development == 'true' %}
+          <div class="ribbon-wrapper">
+            <div class="ribbon">
+              <i class='icon-code'></i>
+            </div>
+          </div>
+        {% endif %}
+      </a>
+    {% endfor %}
+  </div>
+{% endif %}

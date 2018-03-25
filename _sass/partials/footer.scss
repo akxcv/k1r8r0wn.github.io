@@ -1,0 +1,93 @@
+/* =================================
+  Footer
+==================================== */
+
+// Variables
+
+$base-spacing: 1.5em;
+$footer-color: #fdf6e3;
+
+.footer,
+.footer::after {
+  height: auto;
+}
+
+.footer {
+  background: $dark-brown;
+  color: $footer-color;
+  display: inline-block;
+  padding: $base-spacing;
+  text-align: center;
+  width: 100%;
+  @include clearfix;
+  
+  // special clearfix for footer to prevent blank space after it
+  &::after {
+    content: ".";
+    clear: both;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  ul {
+    margin: 0 0 1em 0;
+    padding: 0;
+
+    @include media($medium-screen) {
+      float: left;
+      margin-bottom: 0;
+      margin-left: 1em;
+    }
+  }
+
+  .copyright,
+  .made-with {
+    line-height: 3.6em;
+  }
+
+  .copyright {
+    @include media($medium-screen) {
+      float: left;
+    }
+  }
+
+  .made-with {
+    @include media($medium-screen) {
+      margin-right: 1em;
+      float: right;
+    }
+
+    .heart:hover {
+      color: $red;
+    }
+  }
+
+  .social-links {
+    margin-top: 1em;
+
+    @include media($medium-screen) {
+      float: right;
+    }
+
+    li {
+      display: inline-block;
+      padding-right: .7em;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    img {
+      height: 1.6em;
+      opacity: 0.7;
+      padding: 1px;
+
+      &:focus,
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

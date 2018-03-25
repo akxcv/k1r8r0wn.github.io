@@ -1,0 +1,55 @@
+/* =================================
+  Animations
+==================================== */
+
+@include keyframes(fadeIn) {
+  0%  {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  99% {
+    opacity: 0.99;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(fadeInUp) {
+  0% {
+    opacity: 0;
+    @include transform(translate3d(0, 100%, 0));
+  }
+
+  60% {
+    opacity: .4;
+    @include transform(none);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(pulse) {
+  0% {
+    @include transform(scale3d(1, 1, 1));
+  }
+
+  50% {
+   @include transform(scale3d(1.05, 1.05, 1.05));
+  }
+
+  100% {
+    @include transform(scale3d(1, 1, 1));
+  }
+}

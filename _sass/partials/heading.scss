@@ -1,0 +1,59 @@
+/* =================================
+  Heading
+==================================== */
+
+/* ----- Background image ----- */
+
+// Variables
+
+$heading-wrapper-height:         400px;
+$background-image-height:        $heading-wrapper-height * 2;
+
+.heading-wrapper {
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.background-image {
+  background-position: top;
+  background-size: cover;
+  background-color: $dark-brown;
+  height: $background-image-height;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* ----- Page heading ----- */
+
+.page-heading {
+  color: $white;
+  position: relative;
+  padding: 5em 2em;
+  z-index: 1;
+
+  .title {
+    margin-top: 0;
+    font-size: calc(2.5em + .4vw);
+  }
+
+  hr {
+    border-color: $white;
+  }
+
+  .subtitle {
+    margin: 10px 0 0;
+  }
+
+  .meta {
+    color: $white;
+    margin-top: 1em;
+  }
+
+  .tag {
+    color: $white;
+  }
+}

@@ -1,0 +1,72 @@
+/* =================================
+  List
+==================================== */
+
+/* ----- Posts/projects preview ----- */
+
+.preview {
+  padding: .2em 0;
+
+  .title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+}
+
+/* ----- Projects ----- */
+
+.projects-wrapper {
+  $flex-box-gutter: .4em;
+
+  align-items: stretch;
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  @include clearfix;
+
+  .project {
+    align-self: stretch;
+    display: block;
+    flex: 2 2 15em;
+    margin: $flex-box-gutter;
+    padding: 2em 1em;
+    position: relative;
+    text-decoration: none;
+    @include transition(all .5s ease-in);
+
+    @include color-selection('ruby')
+    @include color-selection('python')
+    @include color-selection('css')
+    @include color-selection('javascript')
+
+    .ribbon-wrapper {
+      @include size(85px);
+      overflow: hidden;
+      position: absolute;
+      right: -1px;
+      top: -1px;
+
+      .ribbon {
+        background-color: $brown;
+        box-shadow: 0 0 3px rgba($dark-brown, .5);
+        color: $white;
+        font-size: .8em;
+        left: -5px;
+        line-height: 1em;
+        padding: 2px 7px;
+        position: relative;
+        text-align: center;
+        top: 15px;
+        transform: rotate(45deg);
+        width: 120px;
+      }
+    }
+  }
+}

@@ -1,28 +1,50 @@
-<footer class='footer'>
-  <div class="social_me">
-    <a href="https://github.com/{{ site.author }}">
-      <i class="icon-github"></i>
-    </a>
-    <a href="http://stackoverflow.com/story/{{ site.author }}">
-      <i class="icon-stackoverflow"></i>
-    </a>
-    <a href="https://twitter.com/{{ site.author }}">
-      <i class="icon-twitter"></i>
-    </a>
-    <a href="https://www.instagram.com/{{ site.author }}">
-      <i class="icon-instagram"></i>
-    </a>
-    <a href="https://linkedin.com/in/{{ site.author }}">
-      <i class="icon-linkedin"></i>
+<!-- Footer -->
+<footer class="footer">
+
+  <div class="copyright">
+    <a href="https://github.com/k1r8r0wn/k1r8r0wn.github.io/blob/master/README.md#licence" title="Some rights reserved.">
+      &#169; {{ site.time | date: '%Y' }} {{ site.author }}
     </a>
   </div>
-  <p class="copyright">
-    &copy; {{ site.author }} {{ site.time | date: '%Y' }}
-  </p>
+
+  <ul class="social-links">
+    <li>
+      <a href="https://github.com/{{ site.author }}">
+        <i class="icon-github"></i>
+      </a>
+    </li>
+    <li>
+      <a href="https://stackoverflow.com/story/{{ site.author }}">
+        <i class="icon-stackoverflow"></i>
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/{{ site.author }}">
+        <i class="icon-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/feed.xml"
+        <i class="icon-rss"></i>
+      </a>
+    </li>
+  </ul>
+
+  <div class="made-with">
+    Made with
+    <a class="heart" href="/humans.txt">
+      <i class="icon-heart"></i>
+    </a>
+    in Siberia
+  </div>
+
 </footer>
 
-<!-- JQuery -->
-<script src="{{ "/vendor/js/jquery-3.1.1.min.js" | prepend: site.baseurl }}"></script>
+<!-- jQuery -->
+<script src="{{ "/vendor/js/jquery.min.js" | prepend: site.baseurl }}"></script>
+
+<!-- Highcharts -->
+<script src="{{ "/vendor/js/highcharts.min.js" | prepend: site.baseurl }}"></script>
 
 <!-- Custom JS -->
-<script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/assets/js/main.min.js" | prepend: site.baseurl }}"></script>
