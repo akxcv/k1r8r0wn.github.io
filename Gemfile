@@ -1,3 +1,3 @@
 source "https://rubygems.org"
 
-gem 'github-pages', '109', group: :jekyll_plugins
+gem 'github-pages', '179', group: :jekyll_plugins
