@@ -4,10 +4,10 @@
 
 @include font-face("icons", "../fonts/icons", $file-formats: ttf eot woff svg);
 
-[class^="icon-"], 
+[class^="icon-"],
 [class*=" icon-"] {
   font-family: 'icons' !important; // use !important to prevent issues with browser extensions that change fonts
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -16,31 +16,47 @@
   speak: none;
 }
 
-.icon-tag::before {
+.icon-phoenix::before {
   content: "\e900";
 }
 
-.icon-heart::before {
-  font-size: .6em;
+.icon-rails::before {
   content: "\e901";
 }
 
-.icon-feed::before {
-  content: "\e907";
+.icon-ruby::before {
+  content: "\e902";
+}
+
+.icon-elixir::before {
+  content: "\e903";
+}
+
+.icon-tag::before {
+  content: "\e904";
+}
+
+.icon-heart::before {
+  vertical-align: middle;
+  content: "\e905";
+}
+
+.icon-code::before {
+  content: "\ea80";
 }
 
 .icon-twitter::before {
-  content: "\e908";
+  content: "\ea96";
 }
 
-.icon-stack-overflow::before {
-  content: "\e909";
+.icon-rss::before {
+  content: "\ea9b";
 }
 
 .icon-github::before {
-  content: "\e90b";
+  content: "\eab0";
 }
 
-.icon-code:before {
-  content: "\ea80";
+.icon-stackoverflow::before {
+  content: "\ead0";
 }
