@@ -24,7 +24,7 @@ seriesData = [
   {
     name: 'Front end'
     color: 'rgb(181,137,0)'
-    data: [8, 7, 7, 5, 5]
+    data: [8, 7, 7, 4]
     visible: false
     xAxis: 1
   }

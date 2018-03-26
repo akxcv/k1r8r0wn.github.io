@@ -49,7 +49,7 @@ nav_weight: 1
           {% assign words = post.content | number_of_words %}
           {% if words <= 100 %}
             &#60; 1
-          {% elsif words >= 100 && words < 360 %}
+          {% elsif words >= 100 and words < 360 %}
             &#126; 1
           {% else %}
             &#126; {{ words | divided_by:180 }}
