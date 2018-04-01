@@ -1,3 +1,5 @@
-source "https://rubygems.org"
+# frozen_string_literal: tru
 
-gem 'github-pages', '179', group: :jekyll_plugins
+source 'https://rubygems.org'
+
+gem 'github-pages', '180', group: :jekyll_plugins
